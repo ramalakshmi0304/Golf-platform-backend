@@ -19,8 +19,7 @@ const allowedOrigins = [
 // 2. Use a simplified CORS configuration
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl) 
-    // or if the origin is in our allowed list
+  
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
