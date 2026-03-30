@@ -32,9 +32,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// 3. (Optional but Recommended) Handle preflight manually if needed
-app.options('*', cors());
-
 app.use(express.json());
 
 // Routes
